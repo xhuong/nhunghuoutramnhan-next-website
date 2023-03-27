@@ -1,0 +1,12 @@
+.cart {
+  &_item {
+    padding: 16px 0;
+  }
+  &_item:not(:first-child) {
+    border-top: 0.5px solid #f0f0f0;
+  }
+  &_item_info {
+    width: 320px;
+    max-width: 320px;
+  }
+}

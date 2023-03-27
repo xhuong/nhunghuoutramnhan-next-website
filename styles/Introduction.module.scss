@@ -1,0 +1,16 @@
+.introduce {
+  &_image_wrapper {
+    height: 260px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .introduce {
+    &_image_wrapper {
+      height: auto;
+    }
+  }
+}

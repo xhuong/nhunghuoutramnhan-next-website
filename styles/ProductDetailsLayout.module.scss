@@ -1,0 +1,19 @@
+.commit {
+  &_image_wrapper {
+    filter: grayscale(1) invert(1);
+    transition: all 0.3s ease;
+  }
+  &_image_wrapper {
+    padding: 8px;
+  }
+  &_item:hover &_image_wrapper {
+    background-color: #b71d21;
+  }
+  &_item:hover &_image_wrapper {
+    filter: grayscale(0) invert(0);
+  }
+}
+
+.promotion_label {
+  bottom: calc(100% - 12px);
+}

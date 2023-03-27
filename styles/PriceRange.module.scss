@@ -1,0 +1,20 @@
+@import "./variables";
+
+.price_range {
+  max-width: 100%;
+  padding: 10px;
+  border: 0.5px solid #f0f0f0;
+  &_heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  &_item {
+    margin: 8px 0;
+  }
+  .ant-checkbox-wrapper span:last-child {
+    font-size: 15px;
+    letter-spacing: 0.1px;
+  }
+}

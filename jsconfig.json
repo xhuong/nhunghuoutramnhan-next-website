@@ -4,4 +4,8 @@
       "@/*": ["./*"]
     }
   }
+  // "sassOptions": {
+  //   "includePaths": ["./"],
+  //   "prependData": "@import '~@styles/variable.scss'"
+  // }
 }

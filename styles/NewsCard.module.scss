@@ -1,0 +1,69 @@
+@import "./variables";
+
+.news_card {
+  &_image_wrapper {
+    height: 260px;
+    max-height: 260px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &_heading {
+    text-transform: uppercase;
+    color: $grayTextColor;
+    font-weight: normal;
+    text-align: center;
+    padding: 0 20px;
+    letter-spacing: 0.1px;
+    margin: 20px 0 10px;
+  }
+
+  &_info {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 0;
+  }
+
+  &_time,
+  &_comment {
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+
+    svg {
+      color: $primaryColor;
+    }
+
+    span {
+      display: inline-block;
+      line-height: 16px;
+      color: #abaaaa;
+      font-size: 13px;
+    }
+  }
+
+  &_description {
+    font-size: 16px;
+    color: $grayTextColor;
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin-bottom: 16px;
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  &_button_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .news_card {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,120 @@
+@import "./variables";
+
+.product {
+  position: relative;
+  &_discount {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    color: $whiteColor;
+    background-color: $thirdColor;
+    font-weight: 500;
+    border-radius: 4px;
+    display: inline-block;
+    z-index: 5;
+    padding: 6px;
+  }
+  &_image_wrapper {
+    position: relative;
+    overflow: hidden;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 120px;
+      height: 120px;
+      background-color: rgba($color: #ffffff, $alpha: 0.3);
+      transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    &::before {
+      left: 100%;
+      bottom: 100%;
+    }
+
+    &::after {
+      top: 100%;
+      right: 100%;
+    }
+
+    &:hover::after {
+      transform: translate(calc(100% + 50px), calc(-100% - 50px));
+    }
+
+    &:hover::before {
+      transform: translate(calc(-100% - 50px), calc(100% + 50px));
+    }
+  }
+
+  &_button_wrapper {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    column-gap: 2px;
+    & button:first-child {
+      flex: 4;
+    }
+    & button:nth-child(2) {
+      flex: 1;
+    }
+
+    svg {
+      font-size: 18px;
+    }
+  }
+
+  &:hover &_button_wrapper {
+    opacity: 1;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $thirdColor;
+  }
+
+  &_title {
+    color: $grayTextColor;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    padding: 0 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  &_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+  }
+
+  &_price {
+    display: flex;
+    flex-direction: column;
+    &_new {
+      font-size: 18px;
+      color: $thirdColor;
+      font-weight: bold;
+    }
+    &_old {
+      font-size: 17px;
+      color: $grayTextLightColor;
+      text-decoration: line-through;
+    }
+  }
+
+  &_add_to_cart {
+    display: inline-flex;
+    font-size: 26px;
+    color: $thirdColor;
+  }
+}

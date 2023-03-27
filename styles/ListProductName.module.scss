@@ -1,0 +1,38 @@
+@import "./variables";
+
+.product_name {
+  &_list {
+    max-width: 100%;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &_item {
+    border: 0.5px solid #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  &_link {
+    white-space: nowrap;
+    background-color: transparent;
+    color: rgb(95, 175, 228);
+    transition: color 0.2s ease-in;
+    font-size: 16px;
+  }
+  &_link_active,
+  &_link:hover {
+    background-color: $primaryColor;
+    color: $whiteColor;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .product_name {
+    &_link {
+      font-size: 18px;
+      padding: 8px 16px;
+    }
+  }
+}

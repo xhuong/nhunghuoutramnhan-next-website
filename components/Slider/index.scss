@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+
+.slider {
+  .slick-prev,
+  .slick-next {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+
+    @media screen and (max-width: 575px) {
+      display: none !important;
+    }
+  }
+  .slick-next {
+    right: 24px;
+  }
+
+  .slick-prev {
+    z-index: 2;
+    left: 24px;
+  }
+
+  .slick-prev::before,
+  .slick-next::before {
+    font-family: "Font Awesome 5 Brands";
+    color: #fff;
+  }
+
+  .slick-dots {
+    bottom: 4px;
+  }
+
+  .slick-dots {
+    li {
+      width: 36px;
+    }
+    button {
+      min-width: 100%;
+    }
+    & li button::before {
+      content: "";
+      opacity: 0.6;
+      min-width: 100%;
+      background-color: #fff;
+      height: 3px;
+      border-radius: 4px;
+    }
+
+    & li.slick-active button:before {
+      opacity: 1;
+    }
+  }
+}

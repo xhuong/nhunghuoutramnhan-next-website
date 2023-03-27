@@ -1,0 +1,22 @@
+@import "./variables";
+
+.modal {
+  background-color: rgba($color: #2e2e2ebc, $alpha: 0.5);
+  &_content {
+    max-width: 780px;
+    background-color: $whiteColor;
+  }
+  &_remove_icon {
+    bottom: 100%;
+    left: 100%;
+    zoom: 2.2;
+    transform: translateX(-50%) translateY(50%);
+  }
+  &_list_product {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  &_item_product {
+    margin-bottom: 16px;
+  }
+}

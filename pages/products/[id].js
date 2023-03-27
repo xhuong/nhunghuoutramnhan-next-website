@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/pages/layouts/Footer";

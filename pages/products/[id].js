@@ -55,7 +55,7 @@ function ProductDetailsPage() {
         <meta name="google-site-verification" content="doG5cGduKFWPNFuUuPMJJQz1fQcvQjNZYjwBRmjDRPs" />
         <meta name="keywords" content={dataDetails.title} />
         <meta property="og:title" content={dataDetails.title} />
-        <meta property="og:url" content={`https://nhunghuoutramnhan.com/blog/${blogItem.id}`} />
+        <meta property="og:url" content={`https://nhunghuoutramnhan.com/products/${dataDetails.id}`} />
         <meta property="og:site_name" content="Nhung hươu trầm nhân" />
         <meta property="og:description" content={dataDetails.description} />
         <meta property="og:type" content="website" />

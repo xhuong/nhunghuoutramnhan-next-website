@@ -15,25 +15,25 @@ function CheckoutForm() {
         <input type="text" placeholder="Địa chỉ" />
       </div>
       <div className={styles.form_group}>
-        <Row gutter={8}>
-          <Col xl={8}>
+        <Row gutter={[8, 8]}>
+          <Col xl={8} lg={8} md={8} sm={12} xs={24}>
             <Select>
               <option value="" selected>
-                Chọn tỉnh / thành
+                Chọn Tỉnh / Thành
               </option>
             </Select>
           </Col>
-          <Col xl={8}>
+          <Col xl={8} lg={8} md={8} sm={12} xs={24}>
             <Select>
               <option value="" selected>
-                Chọn quận / huyện
+                Chọn Quận / Huyện
               </option>
             </Select>
           </Col>
-          <Col xl={8}>
+          <Col xl={8} lg={8} md={8} sm={24} xs={24}>
             <Select>
               <option value="" selected>
-                Chọn phường / xã
+                Chọn Phường / Xã
               </option>
             </Select>
           </Col>

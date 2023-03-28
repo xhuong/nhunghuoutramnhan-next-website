@@ -25,21 +25,17 @@ function CheckoutLayout() {
   return (
     <Section>
       <Row gutter={[16, 16]}>
-        {/* col left  */}
         <Col xl={14} lg={14} md={24} sm={24} xs={24}>
-          {/* heading  */}
           <div className={`${styles.delivery_heading} mb-12`}>
             <h2 className="capitalize text-md-custom">Nhung hươu trầm nhân</h2>
             <Breadcrumb items={[{ title: "Giỏ hàng" }, { title: "Thanh toán đơn hàng" }]} />
           </div>
-          {/* end heading  */}
-          {/* info  */}
+
           <div className={`${styles.delivery_info} mb-12`}>
             <p className={styles.delivery_title}>Thông tin giao hàng</p>
             <CheckoutForm />
           </div>
-          {/* end info  */}
-          {/* delivery method  */}
+
           <div className={`${styles.delivery_method} mb-12`}>
             <p className={styles.delivery_title}>Phương thức vận chuyển</p>
             <div
@@ -55,8 +51,7 @@ function CheckoutLayout() {
               </p>
             </div>
           </div>
-          {/* end delivery method  */}
-          {/* checkout method  */}
+
           <div className={`${styles.checkout_method} mb-16`}>
             <p className={styles.delivery_title}>Phương thức thanh toán</p>
             <ul className={styles.checkout_method_list}>
@@ -110,8 +105,7 @@ function CheckoutLayout() {
               </li>
             </ul>
           </div>
-          {/* end  checkout method  */}
-          {/* footer checkout  */}
+
           <div className={`${styles.checkout_footer} flex justify-between items-center`}>
             <Link className="text-blue-400 tracking-wide" href="/cart">
               Giỏ hàng
@@ -120,7 +114,6 @@ function CheckoutLayout() {
               Hoàn tất đơn hàng
             </ButtonSecondary>
           </div>
-          {/* end footer checkout  */}
         </Col>
 
         <Col xl={10} lg={10} md={24} sm={24} xs={24}>

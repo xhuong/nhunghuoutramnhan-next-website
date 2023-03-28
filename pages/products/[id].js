@@ -56,7 +56,7 @@ function ProductDetailsPage() {
         <meta property="og:site_name" content="Nhung hươu trầm nhân" />
         <meta property="og:description" content={dataDetails.description} />
         <meta property="og:type" content="website" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/home.png" />
       </Head>
       <React.Fragment>
         <Header />

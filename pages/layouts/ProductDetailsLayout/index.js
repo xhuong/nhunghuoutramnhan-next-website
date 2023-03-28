@@ -13,16 +13,13 @@ function ProductDetailsLayout({ data }) {
 
   return (
     <Section>
-      {/* product  */}
       <Row gutter={16}>
-        <Col xl={10} lg={8} md={12}>
-          {/* image  */}
+        <Col xl={10} lg={8} md={12} sm={24} xs={24}>
           <Row>
-            <Col xl={24} md={24} sm={24}>
-              <Image src={imageUrl} alt="" />
+            <Col xl={24} md={24} sm={24} xs={24}>
+              <Image src={imageUrl} alt={name} style={{ margin: "0 auto" }} />
             </Col>
           </Row>
-          {/* image list  */}
           <Row gutter={8} className="mt-4 mb-4 md:mb-0">
             <Col className="cursor-pointer border-red-700 border-solid border-2" xl={6} md={6} sm={6} xs={6}>
               <Image src={imageUrl} alt="" />
@@ -38,8 +35,7 @@ function ProductDetailsLayout({ data }) {
             </Col>
           </Row>
         </Col>
-        <Col xl={8} lg={10} md={12}>
-          {/* name  */}
+        <Col xl={8} lg={10} md={12} sm={24} xs={24}>
           <h1 className="font-bold uppercase text-md-custom">{name}</h1>
 
           <div className="flex items-center">
@@ -47,14 +43,14 @@ function ProductDetailsLayout({ data }) {
             <span className="ml-2">1 đánh giá</span>
           </div>
 
-          <p className="flex items-center gap-x-2 text-lg">
+          <p className="flex items-center gap-x-2 text-sm sm:text-lg">
             <span className="text-primary-color">
               <AiFillCheckCircle />
             </span>
             <span className="font-bold">Thương hiệu:</span> nhunghuoutramnhan.com
           </p>
 
-          <p className="flex items-center gap-x-2 text-lg">
+          <p className="flex items-center gap-x-2 text-sm sm:text-lg">
             <span className="text-primary-color">
               <AiFillCheckCircle />
             </span>
@@ -80,20 +76,24 @@ function ProductDetailsLayout({ data }) {
               <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
               <p className="max-line-three text-lg">Cung cấp sản phẩm số lượng lớn cho doanh nghiệp. Có hóa đơn VAT.</p>
             </li>
+
             <li className="flex items-start gap-x-4 ">
               <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
               <p className="max-line-three text-lg">
                 Hotline/Zalo {"("}24/7{")"}: 0375.524.580
               </p>
             </li>
+
             <li className="flex items-start gap-x-4 ">
               <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
               <p className="max-line-three text-lg">Giao hàng nhanh trên toàn quốc.</p>
             </li>
+
             <li className="flex items-start gap-x-4 ">
               <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
               <p className="max-line-three text-lg">Giao hàng hỏa tốc 2h tại Hà Nội và TP.HCM</p>
             </li>
+
             <li className="flex items-start gap-x-4 ">
               <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
               <p className="max-line-three text-lg">

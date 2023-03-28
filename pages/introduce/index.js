@@ -34,7 +34,12 @@ function Introduce() {
         <Header />
         <div className="pt-4">
           <div className="container">
-            <Breadcrumb items={[{ title: "Trang chủ" }, { title: "Giới thiệu công ty TNHH Nhung Hươu Trầm Nhân" }]} />
+            <Breadcrumb
+              items={[
+                { title: "Trang chủ", link: "/" },
+                { title: "Giới thiệu công ty TNHH Nhung Hươu Trầm Nhân", link: "/introduce" },
+              ]}
+            />
           </div>
         </div>
         <Section>

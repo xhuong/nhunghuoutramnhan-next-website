@@ -3,10 +3,7 @@ import App from "next/app";
 import store from "@/redux/store";
 import withRedux from "next-redux-wrapper";
 import { Provider } from "react-redux";
-
-// export default function App({ Component, pageProps }) {
-//   return <Component {...pageProps} />;
-// }
+import NextNProgress from "nextjs-progressbar";
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -20,6 +17,7 @@ class MyApp extends App {
 
     return (
       <Provider store={store}>
+        <NextNProgress color="#f0f0f0" />
         <Component {...pageProps} />
       </Provider>
     );

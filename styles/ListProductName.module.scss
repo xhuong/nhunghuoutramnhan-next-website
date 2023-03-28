@@ -4,17 +4,23 @@
   &_list {
     max-width: 100%;
     overflow-x: scroll;
+
     &::-webkit-scrollbar {
-      display: none;
+      height: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(205, 209, 228);
+      border-radius: 6px;
     }
   }
 
   &_item {
     border: 0.5px solid #f0f0f0;
     border-radius: 4px;
-    overflow: hidden;
+    display: block;
   }
   &_link {
+    display: block;
     white-space: nowrap;
     background-color: transparent;
     color: rgb(95, 175, 228);

@@ -8,8 +8,6 @@ import { getNameCredenticalByCategoryName } from "@/utils";
 import { useRouter } from "next/router";
 
 function ProductDetailsPage() {
-  console.log("go to id page");
-
   const router = useRouter();
   const { id } = router.query;
   const [dataDetails, setDataDetails] = useState({});

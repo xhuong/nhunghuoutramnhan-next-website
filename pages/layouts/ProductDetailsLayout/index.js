@@ -92,7 +92,7 @@ function ProductDetailsLayout({ data }) {
             </li>
             <li className="flex items-start gap-x-4 ">
               <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
-              <p className="max-line-three text-lg">Giao hàng hỏa tốc 2h tại ...</p>
+              <p className="max-line-three text-lg">Giao hàng hỏa tốc 2h tại Hà Nội và TP.HCM</p>
             </li>
             <li className="flex items-start gap-x-4 ">
               <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />

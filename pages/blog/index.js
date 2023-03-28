@@ -32,7 +32,6 @@ export default function Blog() {
       </Head>
       <main>
         <Header />
-
         <div className="pt-4">
           <div className="container">
             <Breadcrumb

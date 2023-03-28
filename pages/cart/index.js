@@ -10,12 +10,10 @@ import { useSelector } from "react-redux";
 
 function CartPage() {
   const carts = useSelector((state) => state.cart.cart);
-  console.log("🚀 ~ file: index.js:13 ~ CartPage ~ carts:", carts);
 
   return (
     <React.Fragment>
       <Header />
-
       <div className="pt-4">
         <div className="container">
           <Breadcrumb

@@ -9,8 +9,6 @@ import { getNameCredenticalByCategoryName } from "@/utils";
 import { useRouter } from "next/router";
 
 function ProductDetailsPage() {
-  console.log("go to id page");
-
   const router = useRouter();
   const { id } = router.query;
   const [dataDetails, setDataDetails] = useState({});
@@ -25,7 +23,6 @@ function ProductDetailsPage() {
   useEffect(() => {
     if (id) {
       const result = globalData.products.filter((product) => product.id === Number.parseInt(id));
-      console.log("🚀 ~ file: index.js:24 ~ useEffect ~ result:", result);
       if (result.length > 0) {
         setDataDetails({ ...result[0] });
       }

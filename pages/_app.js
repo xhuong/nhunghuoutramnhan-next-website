@@ -17,7 +17,7 @@ class MyApp extends App {
 
     return (
       <Provider store={store}>
-        <NextNProgress color="#f0f0f0" />
+        <NextNProgress color="#08c14fd9" />
         <Component {...pageProps} />
       </Provider>
     );

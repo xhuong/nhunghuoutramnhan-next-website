@@ -8,6 +8,7 @@ import styles from "@/styles/Product.module.scss";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { addProductsToCart } from "@/redux/slices/cartSlice";
+import { priority } from "@/next-sitemap.config";
 
 function Product({ id, name, imageUrl, oldPrice, newPrice, star, categoryId, discount, ...props }) {
   const dispatch = useDispatch();
@@ -37,7 +38,7 @@ function Product({ id, name, imageUrl, oldPrice, newPrice, star, categoryId, dis
     >
       <span className={styles.product_discount}>{discount}</span>
       <div className={styles.product_image_wrapper}>
-        <Image src={imageUrl} alt="" />
+        <Image src={imageUrl} alt="" priority={id === 1 ? true : false} />
         <div className={`${styles.product_button_wrapper} hidden-xs hidden-sm hidden-md`}>
           <Button
             type="secondary"

@@ -83,29 +83,29 @@ function ProductDetailsLayout({ data }) {
 
           <ul className="mt-10 relative p-4 py-8 border-red">
             <li className="flex items-start gap-x-4 ">
-              <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
+              <AiFillCheckCircle className="text-green-600 mt-2" style={{ minWidth: "16px" }} />
               <p className="max-line-three text-lg">Cung cấp sản phẩm số lượng lớn cho doanh nghiệp. Có hóa đơn VAT.</p>
             </li>
 
             <li className="flex items-start gap-x-4 ">
-              <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
+              <AiFillCheckCircle className="text-green-600 mt-2" style={{ minWidth: "16px" }} />
               <p className="max-line-three text-lg">
                 Hotline/Zalo {"("}24/7{")"}: 0375.524.580
               </p>
             </li>
 
             <li className="flex items-start gap-x-4 ">
-              <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
+              <AiFillCheckCircle className="text-green-600 mt-2" style={{ minWidth: "16px" }} />
               <p className="max-line-three text-lg">Giao hàng nhanh trên toàn quốc.</p>
             </li>
 
             <li className="flex items-start gap-x-4 ">
-              <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
+              <AiFillCheckCircle className="text-green-600 mt-2" style={{ minWidth: "16px" }} />
               <p className="max-line-three text-lg">Giao hàng hỏa tốc 2h tại Hà Nội và TP.HCM</p>
             </li>
 
             <li className="flex items-start gap-x-4 ">
-              <AiFillCheckCircle className="min-w-fit text-green-600 mt-2" />
+              <AiFillCheckCircle className="text-green-600 mt-2" style={{ minWidth: "16px" }} />
               <p className="max-line-three text-lg">
                 Hỗ trợ trả góp 0% lãi suất qua thẻ tín dụng với hóa đơn trên 3.000.000 vnđ
               </p>

@@ -35,3 +35,10 @@ export const totalPrice = (carts) => {
     return totalPrice;
   }
 };
+
+export const handleSearchProducts = (searchKey, products, onCompleted) => {
+  const s = searchKey.toLowerCase();
+  const result = products.filter((product) => product.name.toLowerCase().match(s));
+
+  onCompleted(result);
+};

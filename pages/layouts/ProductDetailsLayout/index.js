@@ -7,9 +7,15 @@ import Rate from "@/components/Rate";
 import ButtonSecondary from "@/components/ButtonSecondary";
 import Section from "@/pages/layouts/Section";
 import styles from "@/styles/ProductDetailsLayout.module.scss";
+import { useState } from "react";
+import ModalInformation from "@/components/ModalInformation";
 
 function ProductDetailsLayout({ data }) {
   const { id, name, imageUrl, oldPrice, newPrice, star, categoryId, discount, description } = data;
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const handleOk = () => {
+    setIsOpenModal(false);
+  };
 
   return (
     <Section>
@@ -118,17 +124,39 @@ function ProductDetailsLayout({ data }) {
             </span>
           </ul>
 
-          <div className="flex gap-x-2 mb-4 mt-4">
-            <InputNumber className="flex-1" min={1} max={10} defaultValue={1} size="large" />
-            <ButtonSecondary className="flex-1 uppercase items-center" type="primary" size="full-btn">
+          <ModalInformation title="Thông báo" open={isOpenModal} onOk={handleOk} onCancel={handleOk}>
+            <p>
+              Xin lỗi quý khách, hiện tại tính năng mua hàng đang phát triển. Quý khách muốn mua hàng vui lòng liên hệ
+              SĐT
+              <b> 0375.524.580</b> hoặc nhắn tin qua ứng dụng Zalo
+            </p>
+          </ModalInformation>
+
+          <div className="flex gap-x-2 mb-2 mt-4 sm:flex-row flex-col gap-y-2">
+            <InputNumber className="sm:flex-1 w-1/2" min={1} max={10} defaultValue={1} size="large" />
+            <ButtonSecondary
+              className="sm:flex-1 uppercase items-center"
+              type="primary"
+              size="full-btn"
+              onClick={() => {
+                setIsOpenModal(true);
+              }}
+            >
               <BsCartPlus /> Thêm vào giỏ
             </ButtonSecondary>
-            <ButtonSecondary className="flex-1 uppercase" type="secondary" size="full-btn">
+            <ButtonSecondary
+              className="sm:flex-1 uppercase"
+              type="secondary"
+              size="full-btn"
+              onClick={() => {
+                setIsOpenModal(true);
+              }}
+            >
               Chọn mua
             </ButtonSecondary>
           </div>
 
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-2 sm:flex-row flex-col gap-y-2">
             <ButtonSecondary className="uppercase tracking-wider" type="third" size="full-btn">
               Tư vấn zalo
             </ButtonSecondary>

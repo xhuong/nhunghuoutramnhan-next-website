@@ -1,19 +1,48 @@
 import Link from "next/link";
 import Button from "../Button";
 import { Row, Col } from "antd";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { IoCloseCircleSharp, IoSearch } from "react-icons/io5";
 import { closeMenu } from "@/redux/slices/menuMobileSlice";
-import binhNhungSvg from "@/public/images/mobile/products/binh_nhung_huou.png";
-import nhungHuouTuoiSvg from "@/public/images/mobile/products/nhung_huou_tuoi.png";
 import styles from "@/styles/MenuMobile.module.scss";
 import styles2 from "@/styles/Header.module.scss";
 import Image from "next/image";
+import { globalData } from "@/data";
+import { handleSearchProducts } from "@/utils";
 
 function MenuMobile() {
   const dispatch = useDispatch();
   const isActiveMenu = useSelector((state) => state.menuMobile.isActive);
+
+  const [activeIdCategory, setActiveIdCategory] = useState(1);
+  const [title, setTitle] = useState("");
+  const [listProducts, setListProducts] = useState([]);
+  const [searchKey, setSearchKey] = useState("");
+
+  const getListProductsByIdCategory = (id) => {
+    const result = globalData.products.filter((product) => product.categoryId === id);
+    setListProducts(result);
+  };
+
+  const handleChangeCategory = (id) => {
+    if (id !== activeIdCategory) {
+      setActiveIdCategory(id);
+    }
+  };
+
+  useEffect(() => {
+    if (activeIdCategory) {
+      getListProductsByIdCategory(activeIdCategory);
+
+      const data = globalData.categories[activeIdCategory - 1];
+      setTitle(data.categoryName);
+    }
+  }, [activeIdCategory]);
+
+  const onCompleted = (products) => {
+    setListProducts(products);
+  };
 
   useEffect(() => {
     if (isActiveMenu) {
@@ -39,73 +68,70 @@ function MenuMobile() {
           Đóng
         </span>
         <ul className={styles.menu_mobile_list}>
-          <li
-            className={`${styles.menu_mobile_item} ${styles.menu_mobile_item_active} py-6 px-8 relative active max-line-one before:content-[''] before:hidden before:h-full before:w-1 before:absolute before:left-0 before:top-0`}
-          >
-            <span className={`${styles.menu_mobile_item} py-2 inline-block max-line-one`}>Nhung hươu</span>
-          </li>
-          <li className="styles.menu_mobile_item py-6 px-8">
-            <span className={`${styles.menu_mobile_item} py-2 inline-block max-line-one`}>Nhung hươu</span>
-          </li>
-          <li className="styles.menu_mobile_item py-6 px-8">
-            <span className={`${styles.menu_mobile_item} py-2 inline-block max-line-one`}>Nhung hươu</span>
-          </li>
-          <li className="styles.menu_mobile_item py-6 px-8">
-            <span className={`${styles.menu_mobile_item} py-2 inline-block max-line-one`}>Nhung hươu</span>
-          </li>
-          <li className="styles.menu_mobile_item py-6 px-8">
-            <span className={`${styles.menu_mobile_item} py-2 inline-block max-line-one`}>Nhung hươu</span>
-          </li>
+          {globalData.categories.map((category, index) => (
+            <li
+              key={index}
+              className={`${styles.menu_mobile_item} ${
+                index === activeIdCategory - 1 && styles.menu_mobile_item_active
+              } py-4 pl-3 relative before:content-[''] before:hidden before:h-full before:w-0.5 before:absolute before:left-0 before:top-0`}
+              onClick={() => {
+                handleChangeCategory(category.id);
+              }}
+            >
+              <span className={`${styles.menu_mobile_item} uppercase font-semibold text-xs`}>
+                {category.categoryName}
+              </span>
+            </li>
+          ))}
         </ul>
       </div>
 
       <div className={`${styles.menu_mobile_right} p-2`}>
-        <form action="" className={`${styles.menu_mobile_searchbox} flex`}>
-          <input type="text" placeholder="Tìm kiếm sản phẩm..." className={styles2.header_searchbox_input} />
+        <form
+          action=""
+          className={`${styles.menu_mobile_searchbox} flex`}
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (searchKey) {
+              handleSearchProducts(searchKey, globalData.products, onCompleted);
+            }
+          }}
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm sản phẩm..."
+            value={searchKey}
+            onChange={(e) => {
+              setSearchKey(e.target.value);
+            }}
+            className={styles2.header_searchbox_input}
+          />
           <Button size="sm-btn" type="primary" className="hidden-xs">
             <IoSearch />
           </Button>
         </form>
 
-        <h2 className="text-sm-custom font-bold text-center py-2">Nhung Hươu</h2>
-        <Row gutter={[16, 16]} justify="center" className="h-full overflow-y-scroll">
-          <Col xs={24} sm={8}>
-            <Link className="block" href="/">
-              <Image src={binhNhungSvg} alt="" className="mx-auto mb-3" />
-              <p className="text-center text-xs-custom">Nhung hươu</p>
-            </Link>
-          </Col>
-          <Col xs={24} sm={8}>
-            <Link className="block" href="/">
-              <Image src={nhungHuouTuoiSvg} alt="" className="mx-auto mb-3" />
-              <p className="text-center text-xs-custom">Nhung hươu</p>
-            </Link>
-          </Col>
-          <Col xs={24} sm={8}>
-            <Link className="block" href="/">
-              <Image src={nhungHuouTuoiSvg} alt="" className="mx-auto mb-3" />
-              <p className="text-center text-xs-custom">Nhung hươu</p>
-            </Link>
-          </Col>
-          <Col xs={24} sm={8}>
-            <Link className="block" href="/">
-              <Image src={nhungHuouTuoiSvg} alt="" className="mx-auto mb-3" />
-              <p className="text-center text-xs-custom">Nhung hươu</p>
-            </Link>
-          </Col>
-          <Col xs={24} sm={8}>
-            <Link className="block" href="/">
-              <Image src={nhungHuouTuoiSvg} alt="" className="mx-auto mb-3" />
-              <p className="text-center text-xs-custom">Nhung hươu</p>
-            </Link>
-          </Col>
-          <Col xs={24} sm={8}>
-            <Link className="block" href="/">
-              <Image src={nhungHuouTuoiSvg} alt="" className="mx-auto mb-3" />
-              <p className="text-center text-xs-custom">Nhung hươu</p>
-            </Link>
-          </Col>
+        <h2 className="text-md shadow-md font-bold text-center py-2">{title}</h2>
+        <Row gutter={[8, 8]} className="overflow-y-scroll" style={{ maxHeight: "calc(100% - 86px)" }}>
+          {listProducts.map((product) => (
+            <Col xs={12} sm={8} md={8} className="">
+              <Link
+                className="block"
+                href={`/products/${product.id}`}
+                onClick={() => {
+                  dispatch(closeMenu());
+                }}
+              >
+                <Image src={product.imageUrl} alt="" className="mx-auto mb-3 rounded-xl" />
+                <p className="text-center text-xs">{product.name}</p>
+              </Link>
+            </Col>
+          ))}
         </Row>
+
+        {listProducts.length <= 0 && (
+          <p className="bg-red-200 text-red-700 px-2 py-2 text-center text-sm rounded">Không tìm thấy sản phẩm!</p>
+        )}
       </div>
     </div>
   );

@@ -17,21 +17,31 @@ function ProductDetailsLayout({ data }) {
         <Col xl={10} lg={8} md={12} sm={24} xs={24}>
           <Row>
             <Col xl={24} md={24} sm={24} xs={24}>
-              <Image src={imageUrl} alt={name} style={{ margin: "0 auto" }} />
+              <div className="relative">
+                <Image src={imageUrl} alt={name} style={{ margin: "0 auto" }} />
+              </div>
             </Col>
           </Row>
           <Row gutter={8} className="mt-4 mb-4 md:mb-0">
             <Col className="cursor-pointer border-red-700 border-solid border-2" xl={6} md={6} sm={6} xs={6}>
-              <Image src={imageUrl} alt="" />
+              <div className="relative">
+                <Image src={imageUrl} alt="" />
+              </div>
             </Col>
             <Col className="cursor-pointer" xl={6} md={6} sm={6} xs={6}>
-              <Image src={imageUrl} alt="" />
+              <div className="relative">
+                <Image src={imageUrl} alt="" />
+              </div>
             </Col>
             <Col className="cursor-pointer hidden-sm hidden-xs" xl={6} md={6}>
-              <Image src={imageUrl} alt="" />
+              <div className="relative">
+                <Image src={imageUrl} alt="" />
+              </div>
             </Col>
             <Col className="cursor-pointer hidden-sm hidden-xs" xl={6} md={6}>
-              <Image src={imageUrl} alt="" />
+              <div className="relative">
+                <Image src={imageUrl} alt="" />
+              </div>
             </Col>
           </Row>
         </Col>

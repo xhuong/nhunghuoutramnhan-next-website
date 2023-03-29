@@ -12,7 +12,7 @@ export default function Blog() {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <title>Blog - Nhung Hươu Trầm Nhân</title>
         <meta
           name="description"

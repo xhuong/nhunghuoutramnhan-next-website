@@ -112,7 +112,7 @@ function MenuMobile() {
         </form>
 
         <h2 className="text-md shadow-md font-bold text-center py-2">{title}</h2>
-        <Row gutter={[8, 8]} className="overflow-y-scroll" style={{ maxHeight: "calc(100% - 86px)" }}>
+        <Row gutter={[8, 8]} className="overflow-y-scroll mt-2" style={{ maxHeight: "calc(100% - 94px)" }}>
           {listProducts.map((product, index) => (
             <Col xs={12} sm={8} md={8} className="" key={index}>
               <Link

@@ -28,7 +28,7 @@ function CartLayout({ data }) {
       <Row gutter={16}>
         <Col xl={18} lg={18} md={24} sm={24} xs={24}>
           {data.map((cartItem) => (
-            <Row gutter={8} className={`${styles.cart_item} border-gray-200`}>
+            <Row gutter={8} className={`${styles.cart_item} border-gray-200`} key={cartItem.name}>
               <Col xl={6} lg={6} md={6} sm={6} xs={6}>
                 <Image src={cartItem.imageUrl} alt="" />
               </Col>

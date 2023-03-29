@@ -13,7 +13,7 @@ function News() {
       <div className={styles.section_news_wrapper}>
         <Row gutter={[16, 16]}>
           {globalData.news.data.map((newsItem) => (
-            <Col xl={8} md={12} sm={24} xs={24}>
+            <Col xl={8} md={12} sm={24} xs={24} key={newsItem.id}>
               <NewsCard
                 id={newsItem.id}
                 author={newsItem.author}

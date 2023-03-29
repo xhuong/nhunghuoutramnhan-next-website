@@ -73,9 +73,9 @@ function Introduce() {
                 khách hàng những dòng sản phẩm chất lượng với giá thành hợp lý nhất.
               </p>
               <p className="text-lg">
-                Phương châm hoạt động "Uy tín - Chất lượng - Tận tình - Giá cả hợp lý", để cùng sở hữu những sản phẩm
-                tốt bồi bổ sức khỏe cũng như điều trị bệnh. <b>Nhung Hươu Trầm Nhân</b> luôn đặt chữ “TÍN” lên vị trí
-                hàng đầu, lấy chữ TÍN làm vũ khí cạnh tranh và bảo vệ chữ TÍN như bảo vệ danh dự của chính mình.
+                Phương châm hoạt động Uy tín - Chất lượng - Tận tình - Giá cả hợp lý, để cùng sở hữu những sản phẩm tốt
+                bồi bổ sức khỏe cũng như điều trị bệnh. <b>Nhung Hươu Trầm Nhân</b> luôn đặt chữ TÍN lên vị trí hàng
+                đầu, lấy chữ TÍN làm vũ khí cạnh tranh và bảo vệ chữ TÍN như bảo vệ danh dự của chính mình.
               </p>
               <p className="text-lg">
                 Chúng tôi luôn cố gắng nỗ lực hết mình để đảm bảo đúng và cao hơn cam kết của Công ty với khách hàng,

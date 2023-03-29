@@ -11,7 +11,7 @@ export default function PageNotFound() {
     <React.Fragment>
       <Section>
         <div className="mx-auto" style={{ width: "360px", maxWidth: "100%" }}>
-          <Image src={require("@/public/images/404.png")} />
+          <Image src={require("@/public/images/404.png")} alt="page-error-404" />
         </div>
         <h4 className="font-semibold text-4xl lg:text-8xl text-center  md:leading-tight mt-5 sm:text-3xl">
           Trang không tồn tại, vui lòng thử lại sau !

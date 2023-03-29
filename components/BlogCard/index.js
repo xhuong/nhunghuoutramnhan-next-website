@@ -7,7 +7,7 @@ export default function BlogCard({ id, title, description, imageUrl, author, dat
   return (
     <div className="">
       <div className="max-w-full max-h-64 rounded-2xl overflow-hidden relative">
-        <Image src={imageUrl} />
+        <Image src={imageUrl} alt={description} />
         <div className="absolute left-0 bottom-0 w-full bg-slate-200/40 py-2">
           <div className="pl-4">
             <p className="capitalize font-semibold">Phạm Mạnh Dũng</p>

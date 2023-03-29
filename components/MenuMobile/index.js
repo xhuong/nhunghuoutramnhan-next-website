@@ -113,8 +113,8 @@ function MenuMobile() {
 
         <h2 className="text-md shadow-md font-bold text-center py-2">{title}</h2>
         <Row gutter={[8, 8]} className="overflow-y-scroll" style={{ maxHeight: "calc(100% - 86px)" }}>
-          {listProducts.map((product) => (
-            <Col xs={12} sm={8} md={8} className="">
+          {listProducts.map((product, index) => (
+            <Col xs={12} sm={8} md={8} className="" key={index}>
               <Link
                 className="block"
                 href={`/products/${product.id}`}

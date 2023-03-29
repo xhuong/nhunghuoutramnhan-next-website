@@ -9,7 +9,7 @@ export default function BlogLayout({ id, title, dateUpload, imageUrl, author, co
         Tác giả: {author} - Ngày đăng: {dateUpload}
       </p>
       <div className="mx-auto max-w-2xl overflow-hidden rounded-3xl mb-16">
-        <Image src={imageUrl} />
+        <Image src={imageUrl} alt={title} />
       </div>
 
       <p className="font-medium text-lg text-justify leading-9">{description}</p>

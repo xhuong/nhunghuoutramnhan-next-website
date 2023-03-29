@@ -8,7 +8,7 @@ export default function BlogListLayout({ data }) {
       <h1 className="font-bold text-6xl text-center leading-tight mb-16">Blog Nhung Hươu Trầm Nhân</h1>
       <Row gutter={[16, 16]}>
         {data.map((blogItem) => (
-          <Col xl={8} lg={8} md={12} sm={12} xs={24}>
+          <Col xl={8} lg={8} md={12} sm={12} xs={24} key={blogItem.id}>
             <BlogCard
               id={blogItem.id}
               title={blogItem.title}

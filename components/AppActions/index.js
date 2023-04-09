@@ -14,19 +14,23 @@ function AppActions() {
         </div>
         Xem giỏ hàng
       </Link>
-      <Link className={styles.app_action_item} target="_blank" href="https://zalo.me/0816111308">
+      <Link className={styles.app_action_item} target="_blank" href="https://zalo.me/0375524580">
         <div className={styles.app_action_item_wrapper}>
           <Image src={zaloSvg} alt="" />
         </div>
         Zalo
       </Link>
-      <Link className={styles.app_action_item} target="_blank" href="/">
+      <Link
+        className={styles.app_action_item}
+        target="_blank"
+        href="https://www.facebook.com/profile.php?id=100038798735065"
+      >
         <div className={styles.app_action_item_wrapper}>
           <Image src={messengerSvg} alt="" />
         </div>
         Messenger
       </Link>
-      <Link className={styles.app_action_item} href="/">
+      <Link className={styles.app_action_item} target="_blank" href="https://zalo.me/0375524580">
         <div className={styles.app_action_item_wrapper}>
           <Image src={require("@/public/images/icons/phone.png")} alt="" />
         </div>

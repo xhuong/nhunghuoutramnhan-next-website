@@ -4,8 +4,13 @@ import Button from "@/components/Button";
 import styles from "@/styles/NewsCard.module.scss";
 import { SlClock } from "react-icons/sl";
 import { VscCommentDiscussion } from "react-icons/vsc";
+import { useRouter } from "next/router";
 
 function NewsCard({ id, title, dayUpload, author, comments, imageUrl, description }) {
+  const router = useRouter();
+  const handleClick = (id) => {
+    router.push(`/blog/${id}`);
+  };
   return (
     <div className={styles.news_card}>
       <div className={styles.news_card_image_wrapper}>
@@ -32,6 +37,9 @@ function NewsCard({ id, title, dayUpload, author, comments, imageUrl, descriptio
           textTransform="uppercase"
           type="primary"
           size="full-btn"
+          onClick={() => {
+            handleClick(id);
+          }}
         >
           Đọc tin
         </Button>
@@ -40,6 +48,9 @@ function NewsCard({ id, title, dayUpload, author, comments, imageUrl, descriptio
           textTransform="uppercase"
           type="secondary"
           size="full-btn"
+          onClick={() => {
+            handleClick(id);
+          }}
         >
           Đọc tin
         </Button>
